@@ -26,12 +26,23 @@ export default async function ProjectDetail({ params }: {  params : Promise<{ id
         <div className="grid grid-cols-1 md:grid-cols-3 mt-6 p-4 gap-4">
           <div className="md:col-span-2">
             <h2 className="text-white text-2xl font-bold">Detail</h2>
-            <p className="text-gray-400 mt-2 text-justify">{project.detail}</p>
-            <a href={project.link} target="_blank">
-              <button className="mt-6 bg-blue-700 hover:bg-blue-800 px-8 py-3.5 rounded-xl font-semibold cursor-pointer transition-colors">
-                Lihat Project
-              </button>
-            </a>
+            <p className="text-gray-400 mt-2 mb-6 text-justify">{project.detail}</p>
+            <div className="flex flex-wrap gap-4">
+              {(project.project_link !== "-") && (
+                <a href={project.project_link} target="_blank">
+                  <button className="bg-blue-700 hover:bg-blue-800 px-6 py-3.5 rounded-xl font-semibold cursor-pointer transition-colors">
+                    Lihat Project
+                  </button>
+                </a>
+              )}
+              {(project.docs_link !== "-") && (
+                <a href={project.docs_link} target="_blank">
+                  <button className=" bg-gray-700 hover:bg-gray-800 px-6 py-3.5 rounded-xl font-semibold cursor-pointer transition-colors">
+                    Dokumentasi
+                  </button>
+                </a>
+              )}
+            </div>
           </div>
 
           <div className="bg-gray-900 border border-gray-800 rounded-2xl p-4">
