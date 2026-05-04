@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Kalau mau nambahin font custom atau variable global nanti di sini */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Ini biar background-nya default putih bersih dulu 
+     dan font-nya enak dilihat */
+  @apply bg-slate-950 text-slate-50 antialiased;
+}
+
+/* Setup untuk Dark Mode (Opsional, nanti aja kalau mau ribet) */
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-slate-950 text-slate-50;
+  }
+}
