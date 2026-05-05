@@ -30,7 +30,7 @@ export const projects = [
     description: "Mengembangkan website sederhana penyedia layanan kursus online.",
     image: "/projects/academigod.webp",
     tech: ["CodeIgniter 4", "PHP", "Bootstrap", "MySQL"],
-    docs: ["BRD", "SRS", "ERD", "Flowchart", "Use Case Diagram", "Activity Diagram"],
+    docs: [],
     detail: "Dalam proyek ini, saya bertanggung jawab untuk mengembangkan website sederhana yang menyediakan layanan kursus online.",
     project_link: "https://github.com/nyomanari21/Tubes_DPWeb",
     docs_link: "-"

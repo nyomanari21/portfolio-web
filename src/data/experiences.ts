@@ -37,7 +37,7 @@ export const experiences = [
         id: "web-developer-tugas-besar",
         position: "Web Developer (Tugas Besar Kuliah)",
         company: "Universitas Pendidikan Indonesia",
-        duration: "February 2022 - June 2024",
+        duration: "February 2022 - June 2022",
         description: [
             "Website Online Course (Individu): Bertanggung jawab penuh dalam perancangan arsitektur dan pengembangan fitur utama website menggunakan framework CodeIgniter 4",
             "Website Inventaris Masjid (Tim): Berkolaborasi dengan tim dalam merancang database SQL dan mengimplementasikan proses CRUD data menggunakan framework CodeIgniter 4",

@@ -10,7 +10,7 @@ export default function Home() {
       {/* Container Utama: Buat nengahin konten */}
 
       {/* Section Hero */}
-      <section className="min-h-[calc(100vh-80px)] max-w-7xl mx-auto flex flex-col justify-center items-start gap-6">
+      <section data-aos="zoom-out" className="min-h-[calc(100vh-80px)] max-w-7xl mx-auto flex flex-col justify-center items-start gap-6">
 
         {/* Judul Utama (Nama & Role) */}
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight max-w-4xl">
@@ -34,12 +34,12 @@ export default function Home() {
 
         {/* Tombol Call to Action (CTA) */}
         <div className="flex gap-4 pt-6">
-          <a href="#projects" className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3.5 rounded-xl font-semibold transition-all cursor-pointer">
+          <a href="#projects" className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer">
             Lihat Project
           </a>
-          {/* <a href="#contact" className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-3.5 rounded-xl font-semibold transition-all cursor-pointer border border-gray-700">
-            Kontak Saya
-          </a> */}
+          <a href="https://drive.google.com/file/d/1IthIYd-NP12wLdstB9w74EZmeV5wNKyX/view?usp=sharing" target="_blank" className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer border border-gray-700">
+            Lihat CV Saya
+          </a>
         </div>
 
       </section>
@@ -48,7 +48,7 @@ export default function Home() {
       <section id="about" className="max-w-7xl mx-auto flex items-start gap-6 my-6 scroll-mt-24">
 
         {/* Deskripsi Singkat */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div data-aos="fade-right" className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="flex flex-col gap-4">
             <h2 className="text-4xl font-bold">Tentang Saya</h2>
             <p className="text-lg text-gray-400">
@@ -57,7 +57,7 @@ export default function Home() {
           </div>
 
           {/* Keahlian */}
-          <div className="flex flex-col gap-4">
+          <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col gap-4">
             <h2 className="text-4xl font-bold">Keahlian</h2>
             <div className="flex flex-wrap gap-4">
               {["UML", "ERD", "Draw.io", "PHP", "HTML", "CSS", "Laravel", "Java", "Python", "SQL", "Git"].map((skill) => (
@@ -73,11 +73,11 @@ export default function Home() {
 
       {/* Section Experiences */}
       <section id="experiences" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 my-6 pt-6 scroll-mt-24">
-        <h2 className="text-4xl font-bold mb-6">Pengalaman</h2>
+        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">Pengalaman</h2>
 
         <div className="space-y-6 md:col-span-2">
           {experiences.map((exp) => (
-            <div key={exp.id} className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
+            <div key={exp.id} data-aos="fade-up" data-aos-delay="300" className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
               <div className="flex justify-between mb-4">
                 <div className="flex flex-col gap-1">
                   <h3 className="text-xl font-bold text-white">{exp.position}</h3>
@@ -98,11 +98,11 @@ export default function Home() {
 
       {/* Section Projects */}
       <section id="projects" className="max-w-7xl mx-auto flex flex-col items-start gap-0 my-6 pt-6 scroll-mt-24">
-        <h2 className="text-4xl font-bold mb-6">Project Saya</h2>
+        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">Project Saya</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {projects.map((project) => (
-            <Link href={`/projects/${project.id}`} key={project.id} className="flex">
+            <Link href={`/projects/${project.id}`} key={project.id} data-aos="fade-up" data-aos-delay="300" className="flex">
               <div className="border border-gray-800 rounded-lg flex flex-col w-full hover:border-blue-500 hover:scale-95 transition-all cursor-pointer duration-500 overflow-hidden">
                 <div className="aspect-video relative">
                   <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover rounded-md" />
@@ -121,69 +121,31 @@ export default function Home() {
 
       {/* Section Education */}
       <section id="education" className="max-w-7xl mx-auto flex flex-col gap-6 my-6 pt-6 scroll-mt-24">
-        <h2 className="text-4xl font-bold">Pendidikan</h2>
+        <h2 data-aos="fade-right" className="text-4xl font-bold">Pendidikan</h2>
 
         {education.map((edu) => (
-          <div key={edu.id} className="flex flex-row gap-6 pb-4 max-w-3xl border-b-2 border-gray-800 hover:border-blue-500 hover:max-w-full transition-all duration-500">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="aspect-auto mx-auto">
-                <Image src={edu.image} alt={edu.institution} width={100} height={100} style={{ width: 'auto' }} className="object-contain rounded-md" />
-              </div>
-              <div className="md:col-span-2">
-                <h3 className="text-2xl font-bold text-white mb-2">{edu.degree}</h3>
-                <p className="text-blue-500 text-xl mb-2">{edu.institution}</p>
-                <p className="text-gray-400 mb-2">{edu.duration}</p>
-                <ul className="list-disc list-outside mt-1 ps-4 text-gray-400">
-                  {edu.description.map((desc) => (
-                    <li key={desc}>{desc}</li>
-                  ))}
-                </ul>
+          <div key={edu.id} data-aos="fade-right" data-aos-delay="300" className="w-full">
+            <div className="flex flex-row gap-6 pb-4 max-w-3xl border-b-2 border-gray-800 hover:border-blue-500 hover:max-w-full transition-all duration-500">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="aspect-auto mx-auto">
+                  <Image src={edu.image} alt={edu.institution} width={100} height={100} style={{ width: 'auto' }} className="object-contain rounded-md" />
+                </div>
+                <div className="md:col-span-2">
+                  <h3 className="text-2xl font-bold text-white mb-2">{edu.degree}</h3>
+                  <p className="text-blue-500 text-xl mb-2">{edu.institution}</p>
+                  <p className="text-gray-400 mb-2">{edu.duration}</p>
+                  <ul className="list-disc list-outside mt-1 ps-4 text-gray-400">
+                    {edu.description.map((desc) => (
+                      <li key={desc}>{desc}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         ))}
 
       </section>
-
-      {/* Section Contact */}
-      {/* <section id="contact" className="max-w-7xl mx-auto py-20 px-8 md:px-20 mb-20 scroll-mt-24">
-        <div className="bg-blue-600/5 border border-blue-500/20 rounded-3xl p-10 md:p-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            Tertarik buat <span className="text-blue-500">Kolaborasi?</span>
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-10">
-            Gua selalu terbuka buat diskusi soal system analysis, web development, atau sekadar ngopi santai bahas tech stack terbaru. Drop me a message!
-          </p>
-
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-            <a 
-              href="mailto:nyomanari21@gmail.com" // Ganti pake email asli lu gan
-              className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-2xl font-bold text-lg transition-all hover:scale-105 cursor-pointer shadow-lg shadow-blue-600/20"
-            >
-              Kirim Email
-            </a>
-
-            <div className="flex gap-4">
-              <a 
-                href="https://linkedin.com/in/nyomanari21" // Sesuaikan linknya gan
-                target="_blank" 
-                className="p-4 bg-gray-900 border border-gray-800 rounded-2xl hover:border-blue-500 transition-all cursor-pointer"
-                title="LinkedIn"
-              >
-                <span className="text-white">LinkedIn</span>
-              </a>
-              <a 
-                href="https://github.com/nyomanari21" 
-                target="_blank" 
-                className="p-4 bg-gray-900 border border-gray-800 rounded-2xl hover:border-blue-500 transition-all cursor-pointer"
-                title="GitHub"
-              >
-                <span className="text-white">GitHub</span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       {/* Footer */}
       <footer className="pt-10 border-t border-gray-900 text-center text-gray-500 text-sm">
