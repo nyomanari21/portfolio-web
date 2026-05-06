@@ -17,7 +17,9 @@ export default function Navbar() {
 
   return (
     <nav className={`flex justify-between items-center py-6 px-10 bg-slate-950 border-b border-gray-800 sticky top-0 z-50 transition-all duration-300`}>
-      <Link href="/"><span className="text-xl font-bold tracking-tighter">PORTOFOLIO</span></Link>
+      <Link href="/">
+        <span className="text-xl font-bold tracking-tighter">PORTOFOLIO</span>
+      </Link>
       <div className={getMenuClasses()}>
         <Link href="/#about" className="hover:text-white transition-colors">
             About
@@ -31,9 +33,6 @@ export default function Navbar() {
         <Link href="/#education" className="hover:text-white transition-colors">
             Education
         </Link>
-        {/* <Link href="/#contact" className="hover:text-white transition-colors">
-            Contact
-        </Link> */}
       </div>
 
       <div className="md:hidden flex items-center">

@@ -14,7 +14,7 @@ export default function Home() {
 
         {/* Judul Utama (Nama & Role) */}
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight max-w-4xl">
-          Halo! Saya <span className="text-blue-500">Nyoman Ari.</span><br />
+          Hello! I'm <span className="text-blue-500">Nyoman Ari Satyadharma.</span><br />
           System Analyst & Web Developer.
         </h1>
 
@@ -35,10 +35,10 @@ export default function Home() {
         {/* Tombol Call to Action (CTA) */}
         <div className="flex gap-4 pt-6">
           <a href="#projects" className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer">
-            Lihat Project
+            My Projects
           </a>
           <a href="https://drive.google.com/file/d/1IthIYd-NP12wLdstB9w74EZmeV5wNKyX/view?usp=sharing" target="_blank" className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer border border-gray-700">
-            Lihat CV Saya
+            My CV
           </a>
         </div>
 
@@ -50,17 +50,17 @@ export default function Home() {
         {/* Deskripsi Singkat */}
         <div data-aos="fade-right" className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="flex flex-col gap-4">
-            <h2 className="text-4xl font-bold">Tentang Saya</h2>
+            <h2 className="text-4xl font-bold">About Me</h2>
             <p className="text-lg text-gray-400">
-              Saya Nyoman Ari Satyadharma, seorang lulusan Ilmu Komputer Universitas Pendidikan Indonesia yang tertarik dengan System Analyst, Quality Assurance, Software Development, dan Game Development. Saya dapat menggunakan beberapa bahasa pemrograman, seperti C, C++, Python, Java, PHP. Saya berharap dapat bekerja dengan orang lain untuk mengembangkan keterampilan saya.
+              A Computer Science graduate from Universitas Pendidikan Indonesia with professional experience as a System Analyst and Web Developer. Skilled in business and technical requirements analysis, including the preparation of industry-standard documentation such as BRD and SRS. Experienced in system design using UML and ERD, and adept at collaborating with stakeholders and development teams to ensure seamless alignment between requirements and system implementation. Proficient in multiple programming languages including C, C++, Python, Java, and PHP, with a strong interest in software development, quality assurance, and game development.
             </p>
           </div>
 
           {/* Keahlian */}
           <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col gap-4">
-            <h2 className="text-4xl font-bold">Keahlian</h2>
+            <h2 className="text-4xl font-bold">Skills</h2>
             <div className="flex flex-wrap gap-4">
-              {["UML", "ERD", "Draw.io", "PHP", "HTML", "CSS", "Laravel", "Java", "Python", "SQL", "Git"].map((skill) => (
+              {["UML", "ERD", "Draw.io", "PHP", "HTML", "CSS", "Laravel", "Java", "Python", "C/C++", "SQL", "Git"].map((skill) => (
                 <span key={skill} className="px-4 py-2 bg-gray-900 text-gray-300 text-sm rounded-lg border border-gray-800">
                   {skill}
                 </span>
@@ -73,7 +73,7 @@ export default function Home() {
 
       {/* Section Experiences */}
       <section id="experiences" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 my-6 pt-6 scroll-mt-24">
-        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">Pengalaman</h2>
+        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">Experiences</h2>
 
         <div className="space-y-6 md:col-span-2">
           {experiences.map((exp) => (
@@ -98,7 +98,7 @@ export default function Home() {
 
       {/* Section Projects */}
       <section id="projects" className="max-w-7xl mx-auto flex flex-col items-start gap-0 my-6 pt-6 scroll-mt-24">
-        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">Project Saya</h2>
+        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">My Projects</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
           {projects.map((project) => (
@@ -121,7 +121,7 @@ export default function Home() {
 
       {/* Section Education */}
       <section id="education" className="max-w-7xl mx-auto flex flex-col gap-6 my-6 pt-6 scroll-mt-24">
-        <h2 data-aos="fade-right" className="text-4xl font-bold">Pendidikan</h2>
+        <h2 data-aos="fade-right" className="text-4xl font-bold">Education</h2>
 
         {education.map((edu) => (
           <div key={edu.id} data-aos="fade-right" data-aos-delay="300" className="w-full">

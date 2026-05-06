@@ -5,10 +5,10 @@ export const experiences = [
         company: "PT. Mitra Graha Integrasi",
         duration: "November 2025 - Present",
         description: [
-            "Menganalisis kebutuhan bisnis dan teknis untuk penyusunan Business Requirement Document (BRD) dan Software Requirements Specification (SRS) sesuai standar industri",
-            "Merancang pemodelan sistem menggunakan diagram UML serta Entity Relationship Diagram (ERD) untuk struktur database",
-            "Melakukan komunikasi intensif dengan Project Owner, Project Manager, dan tim developer untuk sinkronisasi kebutuhan fitur dan fungsionalitas sistem",
-            "Memastikan dokumentasi teknis selaras dengan progres pengembangan"
+            "Analyze business and technical requirements for the preparation of Business Requirement Document (BRD) and Software Requirements Specification (SRS) according to industry standards",
+            "Designing system modeling using UML diagrams and Entity Relationship Diagrams (ERD) for database structures",
+            "Conduct intensive communication with the Project Owner, Project Manager, and developer team to synchronize system feature and functionality requirements",
+            "Ensure technical documentation is aligned with development progress"
         ]
     },
     {
@@ -17,9 +17,9 @@ export const experiences = [
         company: "PT. Nusantara Siber Utama",
         duration: "February 2025 - Present",
         description: [
-            "Merancang desain database relasional dan mengembangkan modul input data via form serta upload file Excel",
-            "Mengembangkan dashboard visualisasi data interaktif dalam bentuk chart dan pemetaan wilayah",
-            "Menyusun dokumentasi panduan pengguna dan melakukan Black Box Testing untuk menjamin kualitas fungsionalitas sistem"
+            "Designing relational database design and developing data input module via form and uploading Excel files",
+            "Develop interactive data visualization dashboards in the form of charts and regional mapping.",
+            "Compile user guide documentation and perform Black Box Testing to ensure the quality of system functionality"
         ]
     },
     {
@@ -28,9 +28,9 @@ export const experiences = [
         company: "Universitas Pendidikan Indonesia",
         duration: "February 2024 - January 2025",
         description: [
-            "Melakukan analisis kebutuhan materi serta merancang alur permainan, storyboard, dan aset visual game secara mandiri",
-            "Mengimplementasikan kode program dan menyusun dokumen teknis (UML: Use Case, Activity, Sequence Diagram)",
-            "Melakukan Black Box Testing menyeluruh untuk memastikan seluruh mekanik permainan berjalan sesuai rencana"
+            "Conduct material needs analysis and independently design game flow, storyboards, and game visual assets",
+            "Implement program code and compile technical documents (UML: Use Case, Activity, Sequence Diagram)",
+            "Conduct thorough Black Box Testing to ensure all game mechanics run as planned"
         ]
     },
     {
@@ -39,9 +39,9 @@ export const experiences = [
         company: "Universitas Pendidikan Indonesia",
         duration: "February 2022 - June 2022",
         description: [
-            "Website Online Course (Individu): Bertanggung jawab penuh dalam perancangan arsitektur dan pengembangan fitur utama website menggunakan framework CodeIgniter 4",
-            "Website Inventaris Masjid (Tim): Berkolaborasi dengan tim dalam merancang database SQL dan mengimplementasikan proses CRUD data menggunakan framework CodeIgniter 4",
-            "Dokumentasi Teknis: Menyusun dokumen teknis proyek inventaris masjid sesuai dengan standar template perguruan tinggi guna memastikan keterbacaan alur sistem"
+            "Website Online Course (Individual): Fully responsible for designing the architecture and developing the main features of the website using the CodeIgniter 4 framework",
+            "Mosque Inventory Website (Team): Collaborate with the team in designing a SQL database and implementing data CRUD processes using the CodeIgniter 4 framework",
+            "Technical Documentation: Prepare technical documents for the mosque inventory project in accordance with university template standards to ensure readability of the system flow"
         ]
     }
 ]
