@@ -37,7 +37,7 @@ export default function Home() {
           <a href="#projects" className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer">
             My Projects
           </a>
-          <a href="https://drive.google.com/file/d/1IthIYd-NP12wLdstB9w74EZmeV5wNKyX/view?usp=sharing" target="_blank" className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer border border-gray-700">
+          <a href="https://drive.google.com/file/d/1AEn8pACqWHblXv8JxLWnhguhrm_VsM9Y/view?usp=sharing" target="_blank" className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer border border-gray-700">
             My CV
           </a>
         </div>
