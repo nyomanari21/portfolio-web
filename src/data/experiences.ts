@@ -24,7 +24,7 @@ export const experiences = [
     },
     {
         id: "game-developer-skripsi",
-        position: "Game Developer (Skripsi)",
+        position: "Game Developer (Thesis)",
         company: "Universitas Pendidikan Indonesia",
         duration: "February 2024 - January 2025",
         description: [
@@ -35,7 +35,7 @@ export const experiences = [
     },
     {
         id: "web-developer-tugas-besar",
-        position: "Web Developer (Tugas Besar Kuliah)",
+        position: "Web Developer (College Project)",
         company: "Universitas Pendidikan Indonesia",
         duration: "February 2022 - June 2022",
         description: [
