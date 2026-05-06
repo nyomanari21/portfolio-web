@@ -17,11 +17,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Nyoman Ari Satyadharma | Portfolio Website",
-  description: "Portfolio of Nyoman Ari Satyadharma, a System Analyst and Web Developer from UPI.",
+  description: "Portfolio of Nyoman Ari Satyadharma, a System Analyst and Web Developer from UPI",
   openGraph: {
-    title: "Nyoman Ari | System Analyst Portfolio",
-    description: "Digital portfolio showcasing system analysis and web development projects.",
-    url: "#",
+    title: "Nyoman Ari Satyadharma | Portfolio Website",
+    description: "Portfolio of Nyoman Ari Satyadharma, a System Analyst and Web Developer from UPI",
+    url: "https://nyoman-ari-s-portfolio.vercel.app/",
     siteName: "Nyoman Ari Portfolio",
     locale: "id_ID",
     type: "website",

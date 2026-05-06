@@ -27,7 +27,7 @@ export default async function ProjectDetail({ params }: {  params : Promise<{ id
           <div data-aos="fade-right" className="md:col-span-2">
             <h2 className="text-white text-2xl font-bold">Detail</h2>
             <p className="text-gray-400 mt-2 mb-6 text-justify">{project.detail}</p>
-            <div data-aos="fade-up" className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4">
               {(project.project_link !== "-") && (
                 <a href={project.project_link} target="_blank">
                   <button className="bg-blue-700 hover:bg-blue-800 px-6 py-3.5 rounded-xl font-semibold cursor-pointer transition-colors">
