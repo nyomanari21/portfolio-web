@@ -16,15 +16,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nyoman Ari Satyadharma | Portfolio Website",
-  description: "Portfolio of Nyoman Ari Satyadharma, a System Analyst and Web Developer from UPI",
+  title: "Nyoman Ari Satyadharma | Portfolio",
+  description: "Portfolio of Nyoman Ari Satyadharma, a System Analyst and Web Developer.",
+  metadataBase: new URL('https://nyoman-ari-s-portfolio.vercel.app/'),
   openGraph: {
-    title: "Nyoman Ari Satyadharma | Portfolio Website",
-    description: "Portfolio of Nyoman Ari Satyadharma, a System Analyst and Web Developer from UPI",
-    url: "https://nyoman-ari-s-portfolio.vercel.app/",
-    siteName: "Nyoman Ari Portfolio",
-    locale: "id_ID",
-    type: "website",
+    title: 'Nyoman Ari Satyadharma | Portfolio',
+    description: 'Portfolio of Nyoman Ari Satyadharma, a System Analyst and Web Developer.',
+    url: 'https://nyoman-ari-s-portfolio.vercel.app/',
+    type: 'website',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Nyoman Ari Satyadharma Portfolio',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Nyoman Ari Satyadharma | Portfolio',
+    description: 'Portfolio of Nyoman Ari Satyadharma, a System Analyst and Web Developer.',
+    images: ['/opengraph-image.png'],
   }
 };
 
