@@ -48,7 +48,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <Scroll />
+      {/* <Scroll /> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

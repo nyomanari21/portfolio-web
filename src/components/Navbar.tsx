@@ -1,9 +1,11 @@
 "use client";
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   function getMenuClasses() {
     const baseClasses = "absolute md:static top-full left-0 w-full bg-slate-950 md:w-auto md:bg-transparent px-10 md:px-0 py-5 md:py-0 flex-col md:flex-row gap-4 md:gap-8 text-gray-400 transition-all duration-300 ease-in-out border-b md:border-none border-gray-800";
@@ -17,9 +19,9 @@ export default function Navbar() {
 
   return (
     <nav className={`flex justify-between items-center py-6 px-10 bg-slate-950 border-b border-gray-800 sticky top-0 z-50 transition-all duration-300`}>
-      <Link href="/">
-        <span className="text-xl font-bold tracking-tighter">PORTOFOLIO</span>
-      </Link>
+      <button className="cursor-pointer" onClick={() => { router.push('/', { scroll: false }); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+        <span className="text-xl font-bold tracking-tighter">NYOMAN ARI</span>
+      </button>
       <div className={getMenuClasses()}>
         <Link href="/#about" className="hover:text-white transition-colors">
             About

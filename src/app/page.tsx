@@ -7,7 +7,6 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="bg-slate-950 px-8 pb-20 md:px-20 md:pb-16 text-white">
-      {/* Container Utama: Buat nengahin konten */}
 
       {/* Section Hero */}
       <section data-aos="zoom-out" className="min-h-[calc(100vh-80px)] max-w-7xl mx-auto flex flex-col justify-center items-start gap-6">

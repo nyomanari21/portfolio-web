@@ -54,11 +54,17 @@ export default async function ProjectDetail({ params }: {  params : Promise<{ id
                 </span>
               ))}
             </div>
-            {project.docs.length > 0 && (
-              <h3 className="text-white font-bold mt-4 mb-2">Documentations</h3>
-            )}
+            <h3 className="text-white font-bold mt-4 mb-2">Tools</h3>
             <div className="flex flex-wrap gap-2">
-              {(project.docs.length > 0) && project.docs.map((d) => (
+              {project.tools.map((t) => (
+                <span key={t} className="px-4 py-2 bg-blue-900/20 text-blue-400 text-xs rounded-full border border-blue-800/20">
+                  {t}
+                </span>
+              ))}
+            </div>
+            <h3 className="text-white font-bold mt-4 mb-2">Documentations</h3>
+            <div className="flex flex-wrap gap-2">
+              {project.docs.map((d) => (
                 <span key={d} className="px-4 py-2 bg-blue-900/20 text-blue-400 text-xs rounded-full border border-blue-800/20">
                   {d}
                 </span>
