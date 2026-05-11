@@ -1,11 +1,24 @@
 import { projects } from "@/data/projects";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default async function ProjectDetail({ params }: {  params : Promise<{ id: string }> }) {
-  const id = (await params).id;
+export default async function ProjectDetail({
+  params
+}: {
+  params : Promise<{ id: string, locale: string }>
+}) {
+  const { id, locale } = await params;
 
-  const project = projects.find((p) => p.id === id);
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  const t = await getTranslations('Projects');
+  
+  const projectsList = t.raw('list');
+
+  const project = projectsList.find((p: any) => p.id === id);
 
   if (!project) {
     notFound();
@@ -31,14 +44,14 @@ export default async function ProjectDetail({ params }: {  params : Promise<{ id
               {(project.project_link !== "-") && (
                 <a href={project.project_link} target="_blank">
                   <button className="bg-blue-700 hover:bg-blue-800 px-6 py-3.5 rounded-xl font-semibold cursor-pointer transition-colors">
-                    Project
+                    {t('projectLink')}
                   </button>
                 </a>
               )}
               {(project.docs_link !== "-") && (
                 <a href={project.docs_link} target="_blank">
                   <button className=" bg-gray-700 hover:bg-gray-800 px-6 py-3.5 rounded-xl font-semibold cursor-pointer transition-colors">
-                    Documentation
+                    {t('docsLink')}
                   </button>
                 </a>
               )}
@@ -46,9 +59,9 @@ export default async function ProjectDetail({ params }: {  params : Promise<{ id
           </div>
 
           <div data-aos="fade-left" data-aos-delay="300" className="bg-gray-900 border border-gray-800 rounded-2xl p-4">
-            <h3 className="text-white font-bold mb-2">Technologies</h3>
+            <h3 className="text-white font-bold mb-2">Tech</h3>
             <div className="flex flex-wrap gap-2">
-              {project.tech.map((t) => (
+              {project.tech.map((t: string) => (
                 <span key={t} className="px-4 py-2 bg-blue-900/20 text-blue-400 text-xs rounded-full border border-blue-800/20">
                   {t}
                 </span>
@@ -56,15 +69,17 @@ export default async function ProjectDetail({ params }: {  params : Promise<{ id
             </div>
             <h3 className="text-white font-bold mt-4 mb-2">Tools</h3>
             <div className="flex flex-wrap gap-2">
-              {project.tools.map((t) => (
+              {project.tools.map((t: string) => (
                 <span key={t} className="px-4 py-2 bg-blue-900/20 text-blue-400 text-xs rounded-full border border-blue-800/20">
                   {t}
                 </span>
               ))}
             </div>
-            <h3 className="text-white font-bold mt-4 mb-2">Documentations</h3>
+            {project.docs.length > 0 && (
+              <h3 className="text-white font-bold mt-4 mb-2">Docs</h3>
+            )}
             <div className="flex flex-wrap gap-2">
-              {project.docs.map((d) => (
+              {project.docs.map((d: string) => (
                 <span key={d} className="px-4 py-2 bg-blue-900/20 text-blue-400 text-xs rounded-full border border-blue-800/20">
                   {d}
                 </span>

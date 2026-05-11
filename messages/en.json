@@ -1,0 +1,132 @@
+{
+  "Navbar": {
+    "about": "About",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "education": "Education"
+  },
+  "Hero": {
+    "greeting": "Hello! I'm",
+    "name": "Nyoman Ari Satyadharma.",
+    "position": "System Analyst & Web Developer.",
+    "projectLink": "My Projects",
+    "cvLink": "My CV"
+  },
+  "About": {
+    "descriptionTitle": "Description",
+    "description": "A Computer Science graduate from Universitas Pendidikan Indonesia with professional experience as a System Analyst and Web Developer. Skilled in business and technical requirements analysis, including the preparation of industry-standard documentation such as BRD and SRS. Experienced in system design using UML and ERD, and adept at collaborating with stakeholders and development teams to ensure seamless alignment between requirements and system implementation. Proficient in multiple programming languages including C, C++, Python, Java, and PHP, with a strong interest in software development, quality assurance, and game development.",
+    "skillsTitle": "Skills"
+  },
+  "Experiences": {
+    "title": "Experiences",
+    "list": [
+        {
+            "id": "internship-mgi",
+            "position": "System Analyst (Internship)",
+            "company": "PT. Mitra Graha Integrasi",
+            "duration": "November 2025 - Present",
+            "description": [
+                "Analyze business and technical requirements for the preparation of Business Requirement Document (BRD) and Software Requirements Specification (SRS) according to industry standards",
+                "Designing system modeling using UML diagrams and Entity Relationship Diagrams (ERD) for database structures",
+                "Conduct intensive communication with the Project Owner, Project Manager, and developer team to synchronize system feature and functionality requirements",
+                "Ensure technical documentation is aligned with development progress"
+            ]
+        },
+        {
+            "id": "freelance-nsu",
+            "position": "Web Developer (Freelance)",
+            "company": "PT. Nusantara Siber Utama",
+            "duration": "February 2025 - Present",
+            "description": [
+                "Designing relational database design and developing data input module via form and uploading Excel files",
+                "Develop interactive data visualization dashboards in the form of charts and regional mapping",
+                "Compile user guide documentation and perform Black Box Testing to ensure the quality of system functionality"
+            ]
+        },
+        {
+            "id": "game-developer-skripsi",
+            "position": "Game Developer (Thesis)",
+            "company": "Universitas Pendidikan Indonesia",
+            "duration": "February 2024 - January 2025",
+            "description": [
+                "Conduct material needs analysis and independently design game flow, storyboards, and game visual assets",
+                "Implement program code and compile technical documents (UML: Use Case, Activity, Sequence Diagram)",
+                "Conduct thorough Black Box Testing to ensure all game mechanics run as planned"
+            ]
+        },
+        {
+            "id": "web-developer-tugas-besar",
+            "position": "Web Developer (College Project)",
+            "company": "Universitas Pendidikan Indonesia",
+            "duration": "February 2022 - June 2022",
+            "description": [
+                "Website Online Course (Individual): Fully responsible for designing the architecture and developing the main features of the website using the CodeIgniter 4 framework",
+                "Mosque Inventory Website (Team): Collaborate with the team in designing a SQL database and implementing data CRUD processes using the CodeIgniter 4 framework",
+                "Technical Documentation: Prepare technical documents for the mosque inventory project in accordance with university template standards to ensure readability of the system flow"
+            ]
+        }
+    ]
+  },
+  "Projects": {
+    "title": "My Projects",
+    "projectLink": "Project",
+    "docsLink": "Documentation",
+    "list": [
+        {
+            "id": "company-profile-mgi",
+            "title": "Company Profile of PT. Mitra Graha Integrasi",
+            "role": "System Analyst",
+            "description": "Rebuilding PT. Mitra Graha Integrasi's company profile website with a more modern look and integration with a CMS system",
+            "image": "/projects/compro-migrasi.webp",
+            "tech": ["NestJS", "Next.js", "Tailwind", "MySQL", "Prisma ORM", "Jina AI"],
+            "tools": ["Draw.io", "Google Docs", "ClickUp"],
+            "docs": ["BRD", "SRS", "Entity Relationship Diagram", "Flowchart", "Use Case Diagram", "Activity Diagram"],
+            "detail": "In this project, I am responsible for analyzing the company's business needs and designing and implementing new features on the website. I also create the technical documentation required for system development and maintenance.",
+            "project_link": "https://migrasi.id/",
+            "docs_link": "https://drive.google.com/drive/folders/1uAXUc-mWlK8VErpyzddhmM6iJCvfnOAu?usp=sharing"
+        },
+        {
+            "id": "kopi-simulator",
+            "title": "Kopi Simulator",
+            "role": "Game Developer",
+            "description": "Marketing mix concept introduction game to fulfill thesis requirements in the form of a simple simulation game",
+            "image": "/projects/kopi-simulator.webp",
+            "tech": ["Godot", "GDScript"],
+            "tools": ["Godot Engine", "Draw.io", "Canva", "Figma", "Google Docs", "GitHub"],
+            "docs": ["Dokumen Teknis", "UI/UX Design", "Use Case Diagram", "Activity Diagram", "Class Diagram", "Sequence Diagram", "Black Box Testing", "Validasi Ahli", "User Testing"],
+            "detail": "In this project, I am responsible for developing a simple simulation game to introduce the concept of the marketing mix. In the game, players will take on the role of a coffee entrepreneur trying to manage their business using the marketing mix concepts (4P). Players will face challenges and make decisions to develop their coffee business, such as determining pricing, product quality, location selection, and marketing strategies.",
+            "project_link": "https://nyomanari21.itch.io/kopi-simulator",
+            "docs_link": "https://drive.google.com/file/d/1If_Dh0C4idoFPvZ3x6sSa8GoLNFOhim_/view?usp=sharing"
+        },
+        {
+            "id": "website-online-course",
+            "title": "Academigod - Online Course Website",
+            "role": "Web Developer",
+            "description": "Developing a simple website for providing online course services as a final project for the Web Programming course",
+            "image": "/projects/academigod.webp",
+            "tech": ["CodeIgniter 4", "PHP", "Bootstrap", "MySQL", "XAMPP"],
+            "tools": ["Visual Studio Code", "XAMPP", "GitHub"],
+            "docs": [],
+            "detail": "In this project, I am responsible for developing a simple website that provides online course services. The website allows users to browse available courses, and register for courses. The website is built using the CodeIgniter 4 framework with PHP as the programming language and MySQL as the database management system.",
+            "project_link": "https://github.com/nyomanari21/Tubes_DPWeb",
+            "docs_link": "-"
+        }
+    ]
+  },
+  "Education": {
+    "title": "Education",
+    "list": [
+        {
+            "id": "bachelor-computer-science",
+            "degree": "Bachelor of Computer Science",
+            "institution": "Universitas Pendidikan Indonesia",
+            "duration": "September 2020 - January 2025",
+            "description": [
+                "Graduated with a GPA of 3.92",
+                "Database System Course Lab Assistant"
+            ],
+            "image": "/education/logo-upi.png"
+        }
+    ]
+  }
+}

@@ -1,10 +1,27 @@
 import { projects } from "@/data/projects";
 import { experiences } from "@/data/experiences";
 import { education } from "@/data/education";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { use } from "react";
 
-export default function Home() {
+export default function Home({
+  params
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = use(params);
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
+  const t = useTranslations();
+  const experienceList = t.raw('Experiences.list');
+  const projectList = t.raw('Projects.list');
+  const educationList = t.raw('Education.list');
+
   return (
     <main className="bg-slate-950 px-8 pb-20 md:px-20 md:pb-16 text-white">
 
@@ -13,8 +30,8 @@ export default function Home() {
 
         {/* Judul Utama (Nama & Role) */}
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter leading-tight max-w-4xl">
-          Hello! I'm <span className="text-blue-500">Nyoman Ari Satyadharma.</span><br />
-          System Analyst & Web Developer.
+          {t('Hero.greeting')} <span className="text-blue-500">{t('Hero.name')}</span><br />
+          {t('Hero.position')}
         </h1>
 
         {/* Link Media Sosial */}
@@ -39,10 +56,10 @@ export default function Home() {
         {/* Tombol Call to Action (CTA) */}
         <div className="flex gap-4 pt-6">
           <a href="#projects" className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer">
-            My Projects
+            {t('Hero.projectLink')}
           </a>
           <a href="https://drive.google.com/file/d/1AEn8pACqWHblXv8JxLWnhguhrm_VsM9Y/view?usp=sharing" target="_blank" className="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3.5 rounded-xl font-semibold transition-all cursor-pointer border border-gray-700">
-            My CV
+            {t('Hero.cvLink')}
           </a>
         </div>
 
@@ -54,15 +71,15 @@ export default function Home() {
         {/* Deskripsi Singkat */}
         <div data-aos="fade-right" className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div className="flex flex-col gap-4">
-            <h2 className="text-4xl font-bold">About Me</h2>
+            <h2 className="text-4xl font-bold">{t('About.descriptionTitle')}</h2>
             <p className="text-lg text-gray-400">
-              A Computer Science graduate from Universitas Pendidikan Indonesia with professional experience as a System Analyst and Web Developer. Skilled in business and technical requirements analysis, including the preparation of industry-standard documentation such as BRD and SRS. Experienced in system design using UML and ERD, and adept at collaborating with stakeholders and development teams to ensure seamless alignment between requirements and system implementation. Proficient in multiple programming languages including C, C++, Python, Java, and PHP, with a strong interest in software development, quality assurance, and game development.
+              {t('About.description')}
             </p>
           </div>
 
           {/* Keahlian */}
           <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col gap-4">
-            <h2 className="text-4xl font-bold">Skills</h2>
+            <h2 className="text-4xl font-bold">{t('About.skillsTitle')}</h2>
             <div className="flex flex-wrap gap-4">
               {["UML", "ERD", "Draw.io", "PHP", "HTML", "CSS", "Laravel", "Java", "Python", "C/C++", "SQL", "Git"].map((skill) => (
                 <span key={skill} className="px-4 py-2 bg-gray-900 text-gray-300 text-sm rounded-lg border border-gray-800">
@@ -77,10 +94,10 @@ export default function Home() {
 
       {/* Section Experiences */}
       <section id="experiences" className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 my-6 pt-6 scroll-mt-24">
-        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">Experiences</h2>
+        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">{t('Experiences.title')}</h2>
 
         <div className="space-y-6 md:col-span-2">
-          {experiences.map((exp) => (
+          {experienceList.map((exp: any) => (
             <div key={exp.id} data-aos="fade-up" data-aos-delay="300" className="bg-gray-900 border border-gray-800 rounded-2xl p-6">
               <div className="flex justify-between mb-4">
                 <div className="flex flex-col gap-1">
@@ -89,7 +106,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-400 text-sm text-end">{exp.duration}</p>
               </div>
-              {exp.description.map((desc) => (
+              {exp.description.map((desc: any) => (
                 <ul key={desc} className="list-disc list-outside mt-1 ps-4 text-gray-400">
                   <li>{desc}</li>
                 </ul>
@@ -102,10 +119,10 @@ export default function Home() {
 
       {/* Section Projects */}
       <section id="projects" className="max-w-7xl mx-auto flex flex-col items-start gap-0 my-6 pt-6 scroll-mt-24">
-        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">My Projects</h2>
+        <h2 data-aos="fade-up" className="text-4xl font-bold mb-6">{t('Projects.title')}</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {projects.map((project) => (
+          {projectList.map((project: any) => (
             <Link href={`/projects/${project.id}`} key={project.id} data-aos="fade-up" data-aos-delay="300" className="flex">
               <div className="border border-gray-800 rounded-lg flex flex-col w-full hover:border-blue-500 hover:scale-95 transition-all cursor-pointer duration-500 overflow-hidden">
                 <div className="aspect-video relative">
@@ -125,9 +142,9 @@ export default function Home() {
 
       {/* Section Education */}
       <section id="education" className="max-w-7xl mx-auto flex flex-col gap-6 my-6 pt-6 scroll-mt-24">
-        <h2 data-aos="fade-right" className="text-4xl font-bold">Education</h2>
+        <h2 data-aos="fade-right" className="text-4xl font-bold">{t('Education.title')}</h2>
 
-        {education.map((edu) => (
+        {educationList.map((edu: any) => (
           <div key={edu.id} data-aos="fade-right" data-aos-delay="300" className="w-full">
             <div className="flex flex-row gap-6 pb-4 max-w-3xl border-b-2 border-gray-800 hover:border-blue-500 hover:max-w-full transition-all duration-500">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -139,7 +156,7 @@ export default function Home() {
                   <p className="text-blue-500 text-xl mb-2">{edu.institution}</p>
                   <p className="text-gray-400 mb-2">{edu.duration}</p>
                   <ul className="list-disc list-outside mt-1 ps-4 text-gray-400">
-                    {edu.description.map((desc) => (
+                    {edu.description.map((desc: any) => (
                       <li key={desc}>{desc}</li>
                     ))}
                   </ul>

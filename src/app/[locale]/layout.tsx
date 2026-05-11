@@ -4,6 +4,10 @@ import Navbar from "@/components/Navbar";
 import "./globals.css";
 import { AOSProvider } from "@/components/AOSProvider";
 import Scroll from "@/components/Scroll";
+import { NextIntlClientProvider, hasLocale } from "next-intl";
+import { routing } from "@/i18n/routing";
+import { notFound } from "next/navigation";
+import { setRequestLocale } from "next-intl/server";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,21 +45,38 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({locale}));
+}
+
+export default async function RootLayout({
   children,
+  params
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{locale: string}>;
 }>) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  // Enable static rendering
+  setRequestLocale(locale);
+
   return (
     <html lang="en" data-scroll-behavior="smooth">
       {/* <Scroll /> */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-        <AOSProvider>
-          {children}
-        </AOSProvider>
+        <NextIntlClientProvider>
+          <Navbar />
+          <AOSProvider>
+            {children}
+          </AOSProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

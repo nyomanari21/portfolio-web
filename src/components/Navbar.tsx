@@ -1,11 +1,16 @@
 "use client";
-import Link from 'next/link';
+import { Link, usePathname } from '@/i18n/navigation';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import LocaleSwitcher from './LocaleSwitcher';
+import { useTranslations } from 'next-intl';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+
+  const t = useTranslations('Navbar');
 
   function getMenuClasses() {
     const baseClasses = "absolute md:static top-full left-0 w-full bg-slate-950 md:w-auto md:bg-transparent px-10 md:px-0 py-5 md:py-0 flex-col md:flex-row gap-4 md:gap-8 text-gray-400 transition-all duration-300 ease-in-out border-b md:border-none border-gray-800";
@@ -24,17 +29,20 @@ export default function Navbar() {
       </button>
       <div className={getMenuClasses()}>
         <Link href="/#about" className="hover:text-white transition-colors">
-            About
+            {t('about')}
         </Link>
         <Link href="/#experiences" className="hover:text-white transition-colors">
-            Experiences
+            {t('experiences')}
         </Link>
         <Link href="/#projects" className="hover:text-white transition-colors">
-            Projects
+            {t('projects')}
         </Link>
         <Link href="/#education" className="hover:text-white transition-colors">
-            Education
+            {t('education')}
         </Link>
+        <div>
+          <LocaleSwitcher />
+        </div>
       </div>
 
       <div className="md:hidden flex items-center">

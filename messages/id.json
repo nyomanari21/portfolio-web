@@ -1,0 +1,132 @@
+{
+  "Navbar": {
+    "about": "Tentang",
+    "experiences": "Pengalaman",
+    "projects": "Proyek",
+    "education": "Pendidikan"
+  },
+  "Hero": {
+    "greeting": "Halo! Saya",
+    "name": "Nyoman Ari Satyadharma.",
+    "position": "System Analyst & Web Developer.",
+    "projectLink": "Proyek Saya",
+    "cvLink": "CV Saya"
+  },
+  "About": {
+    "descriptionTitle": "Deskripsi",
+    "description": "Saya merupakan lulusan Ilmu Komputer Universitas Pendidikan Indonesia dengan pengalaman sebagai System Analyst dan Web Developer. Memiliki kemampuan dalam analisis kebutuhan bisnis dan teknis, penyusunan dokumentasi seperti BRD dan SRS, serta perancangan sistem menggunakan UML dan ERD. Terbiasa berkolaborasi dengan stakeholder dan tim pengembang untuk memastikan keselarasan kebutuhan dan implementasi sistem. Menguasai berbagai bahasa pemrograman seperti C, C++, Python, Java, dan PHP, serta memiliki ketertarikan pada pengembangan perangkat lunak, quality assurance, dan game development.",
+    "skillsTitle": "Keahlian"
+  },
+  "Experiences": {
+    "title": "Pengalaman",
+    "list": [
+        {
+            "id": "internship-mgi",
+            "position": "System Analyst (Magang)",
+            "company": "PT. Mitra Graha Integrasi",
+            "duration": "November 2025 - Sekarang",
+            "description": [
+                "Menganalisis kebutuhan bisnis dan teknis untuk penyusunan Business Requirement Document (BRD) dan Software Requirements Specification (SRS) sesuai standar industri",
+                "Merancang pemodelan sistem menggunakan diagram UML serta Entity Relationship Diagram (ERD) untuk struktur database",
+                "Melakukan komunikasi intensif dengan Project Owner, Project Manager, dan tim developer untuk sinkronisasi kebutuhan fitur dan fungsionalitas sistem",
+                "Memastikan dokumentasi teknis selaras dengan progres pengembangan"
+            ]
+        },
+        {
+            "id": "freelance-nsu",
+            "position": "Web Developer (Freelance)",
+            "company": "PT. Nusantara Siber Utama",
+            "duration": "Februari 2025 - Sekarang",
+            "description": [
+                "Merancang desain database relasional dan mengembangkan modul input data via form serta upload file Excel",
+                "Mengembangkan dashboard visualisasi data interaktif dalam bentuk chart dan pemetaan wilayah",
+                "Menyusun dokumentasi panduan pengguna dan melakukan Black Box Testing untuk menjamin kualitas fungsionalitas sistem"
+            ]
+        },
+        {
+            "id": "game-developer-skripsi",
+            "position": "Game Developer (Skripsi)",
+            "company": "Universitas Pendidikan Indonesia",
+            "duration": "Februari 2024 - Januari 2025",
+            "description": [
+                "Melakukan analisis kebutuhan materi serta merancang alur permainan, storyboard, dan aset visual game secara mandiri",
+                "Mengimplementasikan kode program dan menyusun dokumen teknis (UML: Use Case, Activity, Sequence Diagram)",
+                "Melakukan Black Box Testing menyeluruh untuk memastikan seluruh mekanik permainan berjalan sesuai rencana"
+            ]
+        },
+        {
+            "id": "web-developer-tugas-besar",
+            "position": "Web Developer (Tugas Besar Kuliah)",
+            "company": "Universitas Pendidikan Indonesia",
+            "duration": "Februari 2022 - Juni 2022",
+            "description": [
+                "Website Online Course (Individu): Bertanggung jawab penuh dalam perancangan arsitektur dan pengembangan fitur utama website menggunakan framework CodeIgniter 4",
+                "Website Inventaris Masjid (Tim): Berkolaborasi dengan tim dalam merancang database SQL dan mengimplementasikan proses CRUD data menggunakan framework CodeIgniter 4",
+                "Dokumentasi Teknis: Menyusun dokumen teknis proyek inventaris masjid sesuai dengan standar template perguruan tinggi guna memastikan keterbacaan alur sistem"
+            ]
+        }
+    ]
+  },
+  "Projects": {
+    "title": "Proyek Saya",
+    "projectLink": "Proyek",
+    "docsLink": "Dokumentasi",
+    "list": [
+        {
+            "id": "company-profile-mgi",
+            "title": "Company Profile PT. Mitra Graha Integrasi",
+            "role": "System Analyst",
+            "description": "Membangun ulang situs web profil perusahaan PT. Mitra Graha Integrasi dengan tampilan yang lebih modern dan terintegrasi dengan sistem CMS",
+            "image": "/projects/compro-migrasi.webp",
+            "tech": ["NestJS", "Next.js", "Tailwind", "MySQL", "Prisma ORM", "Jina AI"],
+            "tools": ["Draw.io", "Google Docs", "ClickUp"],
+            "docs": ["BRD", "SRS", "Entity Relationship Diagram", "Flowchart", "Use Case Diagram", "Activity Diagram"],
+            "detail": "Dalam proyek ini, saya bertanggung jawab untuk menganalisis kebutuhan bisnis perusahaan serta merancang dan mengimplementasikan fitur-fitur baru pada situs web. Saya juga membuat dokumentasi teknis yang diperlukan untuk pengembangan dan pemeliharaan sistem.",
+            "project_link": "https://migrasi.id/",
+            "docs_link": "https://drive.google.com/drive/folders/1uAXUc-mWlK8VErpyzddhmM6iJCvfnOAu?usp=sharing"
+        },
+        {
+            "id": "kopi-simulator",
+            "title": "Kopi Simulator",
+            "role": "Game Developer",
+            "description": "Pengenalan konsep marketing mix dalam bentuk game simulasi sederhana untuk memenuhi persyaratan skripsi",
+            "image": "/projects/kopi-simulator.webp",
+            "tech": ["Godot", "GDScript"],
+            "tools": ["Godot Engine", "Draw.io", "Canva", "Figma", "Google Docs", "GitHub"],
+            "docs": ["Dokumen Teknis", "UI/UX Design", "Use Case Diagram", "Activity Diagram", "Class Diagram", "Sequence Diagram", "Black Box Testing", "Validasi Ahli", "User Testing"],
+            "detail": "Dalam proyek ini, saya bertanggung jawab untuk mengembangkan game simulasi sederhana untuk memperkenalkan konsep marketing mix. Dalam permainan ini, pemain akan berperan sebagai pengusaha kopi yang mencoba mengelola bisnis mereka menggunakan konsep marketing mix (4P). Pemain akan menghadapi tantangan dan membuat keputusan untuk mengembangkan bisnis kopi mereka, seperti menentukan harga, kualitas produk, pemilihan lokasi, dan strategi pemasaran.",
+            "project_link": "https://nyomanari21.itch.io/kopi-simulator",
+            "docs_link": "https://drive.google.com/file/d/1If_Dh0C4idoFPvZ3x6sSa8GoLNFOhim_/view?usp=sharing"
+        },
+        {
+            "id": "website-online-course",
+            "title": "Academigod - Website Kursus Online",
+            "role": "Web Developer",
+            "description": "Mengembangkan website sederhana untuk menyediakan layanan kursus online sebagai proyek akhir mata kuliah Pemrograman Web",
+            "image": "/projects/academigod.webp",
+            "tech": ["CodeIgniter 4", "PHP", "Bootstrap", "MySQL", "XAMPP"],
+            "tools": ["Visual Studio Code", "XAMPP", "GitHub"],
+            "docs": [],
+            "detail": "Dalam proyek ini, saya bertanggung jawab untuk mengembangkan website sederhana yang menyediakan layanan kursus online. Website ini memungkinkan pengguna untuk menelusuri kursus yang tersedia dan mendaftar untuk kursus. Website ini dibangun menggunakan framework CodeIgniter 4 dengan PHP sebagai bahasa pemrograman dan MySQL sebagai sistem manajemen basis data.",
+            "project_link": "https://github.com/nyomanari21/Tubes_DPWeb",
+            "docs_link": "-"
+        }
+    ]
+  },
+  "Education": {
+    "title": "Pendidikan",
+    "list": [
+        {
+            "id": "bachelor-computer-science",
+            "degree": "Sarjana Ilmu Komputer",
+            "institution": "Universitas Pendidikan Indonesia",
+            "duration": "September 2020 - Januari 2025",
+            "description": [
+                "Lulus dengan IPK 3.92",
+                "Asisten Praktikum Mata Kuliah Sistem Basis Data"
+            ],
+            "image": "/education/logo-upi.png"
+        }
+    ]
+  }
+}
