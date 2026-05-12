@@ -126,7 +126,7 @@ export default function Home({
             <Link href={`/projects/${project.id}`} key={project.id} data-aos="fade-up" data-aos-delay="300" className="flex">
               <div className="border border-gray-800 rounded-lg flex flex-col w-full hover:border-blue-500 hover:scale-95 transition-all cursor-pointer duration-500 overflow-hidden">
                 <div className="aspect-video relative">
-                  <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover rounded-md" />
+                  <Image src={project.image} alt={project.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover rounded-t-md" />
                 </div>
                 <div className="p-6 bg-gray-900 flex flex-col flex-1">
                   <span className="text-xs text-blue-500">{project.role}</span>
