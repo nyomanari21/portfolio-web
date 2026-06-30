@@ -73,6 +73,19 @@
     "docsLink": "Dokumentasi",
     "list": [
         {
+            "id": "bouquet-by-dila",
+            "title": "Bouquet By Dila - Website Toko Buket",
+            "role": "Web Developer",
+            "description": "Mengembangkan website toko buket yang menyediakan berbagai macam buket bunga dan melayani pembuatan buket custom",
+            "image": "/projects/bouquet-by-dila.webp",
+            "tech": ["Next.js", "Tailwind", "PostgreSQL", "Supabase"],
+            "tools": ["Visual Studio Code", "GitHub"],
+            "docs": [],
+            "detail": "Dalam proyek ini, saya bertanggung jawab untuk mengembangkan website menyediakan buket bunga dan melayani pembuatan buket bunga khusus. Website ini memungkinkan pelanggan untuk memesan buket, baik melalui katalog atau melalui pemesanan khusus. Website ini dibangun menggunakan framework Next.js dengan TypeScript sebagai bahasa pemrograman dan PostgreSQL melalui Supabase sebagai sistem manajemen basis data dan fitur autentikasi",
+            "project_link": "https://bouquet-by-dila.vercel.app/",
+            "docs_link": "-"
+        },
+        {
             "id": "company-profile-mgi",
             "title": "Company Profile PT. Mitra Graha Integrasi",
             "role": "System Analyst",

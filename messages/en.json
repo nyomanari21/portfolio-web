@@ -73,6 +73,19 @@
     "docsLink": "Documentation",
     "list": [
         {
+            "id": "bouquet-by-dila",
+            "title": "Bouquet By Dila - Bouquet Shop Website",
+            "role": "Web Developer",
+            "description": "Develop a bouquet shop website that provides various types of flower bouquets and serves custom bouquet making",
+            "image": "/projects/bouquet-by-dila.webp",
+            "tech": ["Next.js", "Tailwind", "PostgreSQL", "Supabase"],
+            "tools": ["Visual Studio Code", "GitHub"],
+            "docs": [],
+            "detail": "In this project, I was responsible for developing a website that provides flower bouquets and custom-made bouquets. This website allows customers to order bouquets, either through a catalog or through custom orders. The website was built using the Next.js framework with TypeScript as the programming language and PostgreSQL via Supabase as the database management system and authentication features",
+            "project_link": "https://bouquet-by-dila.vercel.app/",
+            "docs_link": "-"
+        },
+        {
             "id": "company-profile-mgi",
             "title": "Company Profile of PT. Mitra Graha Integrasi",
             "role": "System Analyst",
