@@ -81,7 +81,7 @@ export default function Home({
           <div data-aos="fade-left" data-aos-delay="300" className="flex flex-col gap-4">
             <h2 className="text-4xl font-bold">{t('About.skillsTitle')}</h2>
             <div className="flex flex-wrap gap-4">
-              {["UML", "ERD", "Draw.io", "PHP", "HTML", "CSS", "Laravel", "Java", "Python", "C/C++", "SQL", "Git"].map((skill) => (
+              {["BRD/SRS Docs", "UML", "ERD", "SDLC (Agile/Scrum)", "Git/GitHub", "Figma", "Draw.io", "ClickUp", "PHP (Laravel/CI)", "TypeScript/JavaScript (Next.js)", "HTML", "CSS", "MySQL", "PostgreSQL", "Supabase"].map((skill) => (
                 <span key={skill} className="px-4 py-2 bg-gray-900 text-gray-300 text-sm rounded-lg border border-gray-800">
                   {skill}
                 </span>
